@@ -10,24 +10,24 @@ Calculator project I built to practice using Ruby and RSpec
 
 Install deps: `gem install bundler && bundle install`.  Run `rspec` to run all tests, `rspec spec/<spec file name>` to run individual tests, or `ruby calculator.rb` to run the program. 
 
-Currently the program doesn't do anything on its own unless you call the `calculate()` function inside of it with the correct arguments.
+Currently the program doesn't do anything on its own unless you call the `calculate` method inside of it with the correct arguments.
 
-The `(a,b,c)` arguments are as follows:
+The `(first_num, op_symbol, second_num)` arguments are as follows:
 
-a --> first number
-b --> one of these operators `+ - x / % ^`
-c --> second number
+first_num --> first number (left side of operator)  
+op_symbol --> one of these operators `+ - x / % ^`  
+second_num --> second number (right side of operator)  
 
-The program will take your first number and second number, and apply the operator in the middle of the number.
+The program will take these arguments and build them into a math equation.
 
 Example:
 
-a = 5
-b = `-`
-c = 3
+first_num = 5  
+op_symbol = `-`  
+second_num = 3  
 
-Lines of code to put at the bottom of `calculator.rb` to run the function: 
-`calculator = Calculator.new`
-`calculator.calculate(5,'-',3)`
-Expression: 5 - 3
-Solution: 2 
+Lines of code to put at the bottom of `calculator.rb` to run the function:  
+`calculator = Calculator.new`  
+`calculator.calculate(5,'-',3)`  
+Expression: 5 - 3  
+Solution: 2   
